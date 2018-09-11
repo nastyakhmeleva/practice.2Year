@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f0a76945d1df4a37aac1b40830ab043f" Name="Diagram1" ZoomLevel="57" >
-        <EntityTypeShape EntityType="Model.Books" Width="1.5" PointX="7.75" PointY="3" />
-        <EntityTypeShape EntityType="Model.Author" Width="1.5" PointX="10.5" PointY="3" />
-        <EntityTypeShape EntityType="Model.BookExemplar" Width="1.5" PointX="3.75" PointY="2.875" />
-        <EntityTypeShape EntityType="Model.Genre" Width="1.5" PointX="7.75" PointY="6.125" />
-        <EntityTypeShape EntityType="Model.City" Width="1.5" PointX="1.125" PointY="6" />
-        <EntityTypeShape EntityType="Model.Store" Width="1.5" PointX="1.125" PointY="3.125" />
-        <EntityTypeShape EntityType="Model.Series" Width="1.5" PointX="3.25" PointY="0.5" />
-        <EntityTypeShape EntityType="Model.Country" Width="1.5" PointX="10.5" PointY="6.125" />
+      <Diagram DiagramId="f0a76945d1df4a37aac1b40830ab043f" Name="Diagram1" ZoomLevel="97" >
+        <EntityTypeShape EntityType="Model.Books" Width="1.5" PointX="4.875" PointY="2.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.Author" Width="1.5" PointX="6.875" PointY="2.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.BookExemplar" Width="1.5" PointX="2.875" PointY="2.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.Genre" Width="1.5" PointX="4.875" PointY="3.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.City" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.Store" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.Series" Width="1.5" PointX="2.875" PointY="1.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="Model.Country" Width="1.5" PointX="6.875" PointY="3.75" IsExpanded="false" />
         <EntityTypeShape EntityType="Model.Privelege" Width="1.5" PointX="8" PointY="1.25" IsExpanded="false" />
         <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="false" />
         <AssociationConnector Association="Model.BooksAuthor" />

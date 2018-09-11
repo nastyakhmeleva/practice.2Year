@@ -72,8 +72,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" />
           <Property Name="Surname" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
           <Property Name="SecondName" Type="String" Nullable="true" />
           <NavigationProperty Name="Books" Relationship="Model.BooksAuthor" FromRole="Author" ToRole="Books" />
           <NavigationProperty Name="Country1" Relationship="Model.CountryAuthor" FromRole="Author" ToRole="Country" />
