@@ -6,9 +6,10 @@ using System.Web.Mvc;
 
 namespace PublishingHouse.Controllers
 {
-    public class HomeController : Controller
+    public class ShowController : Controller
     {
-        public ActionResult Index()
+        // GET: Show
+        public ActionResult ShowBooks()
         {
             return View();
         }
