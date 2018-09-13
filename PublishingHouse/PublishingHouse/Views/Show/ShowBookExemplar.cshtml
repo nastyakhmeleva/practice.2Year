@@ -1,0 +1,25 @@
+﻿
+@{
+    Books book = ViewBag.Book;
+    ViewBag.Title = book.Name;
+}
+
+<br />
+
+Название:
+@{Write(book.Name);}
+
+<br />
+<br />
+
+Автор:
+@{Write(book.Author.Surname + ' ' + book.Author.Name + ' ' + book.Author.SecondName);}
+
+<br />
+<br />
+
+Жанр:
+@{Write(book.Genre.Name);}
+
+
+

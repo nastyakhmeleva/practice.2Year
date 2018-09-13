@@ -21,7 +21,9 @@
         {
             <tr>
                 <td>
-                    @{Write(book.Name);}
+                    <a href="~/Show/ShowBookExemplar/@book.Id">
+                        @{Write(book.Name);}
+                    </a>
                 </td>
 
                 <td>

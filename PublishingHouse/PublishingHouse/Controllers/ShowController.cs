@@ -13,5 +13,12 @@ namespace PublishingHouse.Controllers
         {
             return View();
         }
+
+        public ActionResult ShowBookExemplar(int id)
+        {
+            ModelContainer model=new ModelContainer();
+            ViewBag.Book = model.BooksSet.Find(id);
+            return View();
+        }
     }
 }
