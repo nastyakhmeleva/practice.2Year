@@ -4,7 +4,7 @@
     ModelContainer model = new ModelContainer();
 }
 
-<table>
+<table class="table">
     <tr>
         <th>
             Название
@@ -16,8 +16,22 @@
             Жанр
         </th>
     </tr>
-    <tr>
-        
-    </tr>
-</table>
+    @{
+        foreach (Books book in model.BooksSet)
+        {
+            <tr>
+                <td>
+                    @{Write(book.Name);}
+                </td>
 
+                <td>
+                    @{Write(book.Author.Surname + ' ' + book.Author.Name + ' ' + book.Author.SecondName);}
+                </td>
+
+                <td>
+                    @{Write(book.Genre.Name);}
+                </td>
+            </tr>
+                        }
+    }
+</table>
