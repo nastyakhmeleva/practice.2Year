@@ -27,12 +27,16 @@
                 </td>
 
                 <td>
-                    @{Write(book.Author.Surname + ' ' + book.Author.Name + ' ' + book.Author.SecondName);}
-                </td>
+                    <a href="~/Show/ShowAuthor/@book.Author.Id">
+                        @{Write(book.Author.Surname + ' ' + book.Author.Name + ' ' + book.Author.SecondName);}
+                    </a>
+</td>
 
                 <td>
-                    @{Write(book.Genre.Name);}
-                </td>
+                    <a href="~/Show/ShowGenre/@book.Genre.Id">
+                        @{Write(book.Genre.Name);}
+                    </a>
+</td>
             </tr>
                         }
     }

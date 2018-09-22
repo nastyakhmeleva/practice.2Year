@@ -1,6 +1,7 @@
 ﻿@{
     ModelContainer model = new ModelContainer();
     Books book = ViewBag.Book;
+    var booksExemplar = ViewBag.BookExemplar;
     ViewBag.Title = book.Name;
 }
 
@@ -21,8 +22,8 @@
 Жанр:
 @{Write(book.Genre.Name);}
 
-<br/>
-<br/>
+<br />
+<br />
 
 
 <table class="table">
@@ -38,27 +39,23 @@
         </th>
     </tr>
     @{
-        foreach (BookExemplar b in model.BookExemplarSet)
+        foreach (BookExemplar b in booksExemplar)
         {
-            if (b.Books == book)
-            {
-                <tr>
-                    <td>
-                        <a href="~/Show/ShowBookExemplar/@book.Id">
-                            @{ Write(b.Store.Name + " - " + b.Store.Address); }
-                        </a>
-                    </td>
+            <tr>
+                <td>
 
-                    <td>
-                        @{ Write(b.Store.City.Name); }
-                    </td>
+                    @{ Write(b.Store.Name + " - " + b.Store.Address); }
+                </td>
 
-                    <td>
-                        @{ Write(b.Series.Name); }
-                    </td>
-                </tr>
-            }
-        }
+                <td>
+                    @{ Write(b.Store.City.Name); }
+                </td>
+
+                <td>
+                    @{ Write(b.Series.Name); }
+                </td>
+            </tr>
+                        }
     }
 </table>
 

@@ -333,6 +333,8 @@
     <Content Include="Views\Show\ShowBooks.cshtml" />
     <Content Include="Views\Show\ShowBookExemplar.cshtml" />
     <Content Include="Views\AddNewObject\AddBookExemplar.cshtml" />
+    <Content Include="Views\Show\ShowAuthor.cshtml" />
+    <Content Include="Views\Show\ShowGenre.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

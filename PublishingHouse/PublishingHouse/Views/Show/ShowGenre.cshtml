@@ -1,0 +1,52 @@
+﻿@{
+    ModelContainer model = new ModelContainer();
+    Genre genre = ViewBag.Genre;
+    var books = ViewBag.Books;
+    ViewBag.Title = genre.Name;
+}
+
+<br />
+
+Название:
+@{Write(genre.Name);}
+
+<br />
+<br />
+
+Описание:
+@{Write(genre.Description);}
+
+<br />
+<br />
+
+
+<table class="table">
+    <tr>
+        <th>
+            Название
+        </th>
+        <th>
+            Автор
+        </th>
+    </tr>
+    @{
+        foreach (Books b in books)
+        {
+            <tr>
+                <td>
+                    <a href="~/Show/ShowBookExemplar/@b.Id">
+                        @{ Write(b.Name); }
+                    </a>
+                </td>
+
+                <td>
+                    <a href="~/Show/ShowAuthor/@b.Author.Id">
+                        @{ Write(b.Author.Surname + ' ' + b.Author.Name + ' ' + b.Author.SecondName); }
+                    </a>
+                </td>
+            </tr>
+                            }
+    }
+</table>
+
+<p><a href="~/AddNewObject/ShowBooks" class="btn btn-primary btn-lg">Добавить &raquo;</a></p>

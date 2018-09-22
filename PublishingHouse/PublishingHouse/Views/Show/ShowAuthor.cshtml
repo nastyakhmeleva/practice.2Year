@@ -1,0 +1,53 @@
+﻿@{
+    ModelContainer model = new ModelContainer();
+    Author author = ViewBag.Author;
+    var books = ViewBag.Books;
+    ViewBag.Title = author.Surname + ' ' + author.Name + ' ' + author.SecondName;
+}
+
+<br />
+
+ФИО:
+@{Write(author.Surname + ' ' + author.Name + ' ' + author.SecondName);}
+
+<br />
+<br />
+
+Страна:
+@{Write(author.Country.Name);}
+
+<br />
+<br />
+
+
+<table class="table">
+    <tr>
+        <th>
+            Название
+        </th>
+        <th>
+            Жанр
+        </th>
+    </tr>
+    @{
+        foreach (Books b in books)
+        {
+            <tr>
+                <td>
+                    <a href="~/Show/ShowBookExemplar/@b.Id">
+                        @{ Write(b.Name); }
+                    </a>
+
+                </td>
+
+                <td>
+                    <a href="~/Show/ShowGenre/@b.Genre.Id">
+                        @{ Write(b.Genre.Name); }
+                    </a>
+                </td>
+            </tr>
+                            }
+    }
+</table>
+
+<p><a href="~/AddNewObject/ShowBooks" class="btn btn-primary btn-lg">Добавить &raquo;</a></p>
