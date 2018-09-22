@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Добавить";
+    ModelContainer model=new ModelContainer();
+}
+
+<form method="post" href="~/AddNewObject/">
+
+    Магазин:
+    <select name="StoreId">
+
+
+        @{
+            foreach (Store store in model.StoreSet)
+            {
+                <option value="@store.Id">@{ Write(store.Name+" - "+store.City.Name); }</option>
+                    }
+        }
+    </select>
+    <br />
+    <br />
+    Серия:
+    <select name="SerieId">
+
+
+        @{
+            foreach (Series serie in model.SeriesSet)
+            {
+                <option value="@serie.Id">@{ Write(serie.Name); }</option>
+                    }
+        }
+    </select>
+    <br />
+    <br />
+    
+    <input class="btn btn-default" type="submit" value="Добавить" />
+</form>

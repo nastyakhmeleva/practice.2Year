@@ -1,5 +1,5 @@
-﻿
-@{
+﻿@{
+    ModelContainer model = new ModelContainer();
     Books book = ViewBag.Book;
     ViewBag.Title = book.Name;
 }
@@ -21,5 +21,45 @@
 Жанр:
 @{Write(book.Genre.Name);}
 
+<br/>
+<br/>
 
 
+<table class="table">
+    <tr>
+        <th>
+            Магазин
+        </th>
+        <th>
+            Город
+        </th>
+        <th>
+            Серия
+        </th>
+    </tr>
+    @{
+        foreach (BookExemplar b in model.BookExemplarSet)
+        {
+            if (b.Books == book)
+            {
+                <tr>
+                    <td>
+                        <a href="~/Show/ShowBookExemplar/@book.Id">
+                            @{ Write(b.Store.Name + " - " + b.Store.Address); }
+                        </a>
+                    </td>
+
+                    <td>
+                        @{ Write(b.Store.City.Name); }
+                    </td>
+
+                    <td>
+                        @{ Write(b.Series.Name); }
+                    </td>
+                </tr>
+            }
+        }
+    }
+</table>
+
+<p><a href="~/AddNewObject/ShowBooks" class="btn btn-primary btn-lg">Добавить &raquo;</a></p>

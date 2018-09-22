@@ -210,6 +210,7 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddNewObjectController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ShowController.cs" />
@@ -331,6 +332,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Show\ShowBooks.cshtml" />
     <Content Include="Views\Show\ShowBookExemplar.cshtml" />
+    <Content Include="Views\AddNewObject\AddBookExemplar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
