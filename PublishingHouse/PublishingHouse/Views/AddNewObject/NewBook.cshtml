@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Новая книга";
+    ModelContainer model=new ModelContainer();
+}
+
+<br />
+
+<form method="post" action="~/AddNewObject/AddBook">
+
+    Название:
+    <input type="text" name="Name" />
+
+    <br />
+    <br />
+
+    Описание:
+    <input type="text" name="Info" />
+
+    <br />
+    <br />
+
+    Автор:
+    <select name="AuthorId">
+        @{
+            foreach (Author author in model.AuthorSet)
+            {
+                <option value="@author.Id">@{ Write(author.Surname + ' ' + author.Name + ' ' + author.SecondName); }</option>
+            }
+        }
+    </select>
+
+    <br />
+    <br />
+
+    Жанр:
+    <select name="GenreId">
+
+
+        @{
+            foreach (Genre genre in model.GenreSet)
+            {
+                <option value="@genre.Id">@{ Write(genre.Name); }</option>
+            }
+        }
+    </select>
+    <br />
+    <br />
+    
+    <input class="btn btn-default" type="submit" value="Добавить" />
+</form>
+
+<p><a href="~/AddNewObject/NewAuthor" class="btn btn-primary btn-lg">Добавить автора&raquo;</a></p>
+<p><a href="~/AddNewObject/NewGenre" class="btn btn-primary btn-lg">Добавить жанр&raquo;</a></p>
+

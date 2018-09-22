@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Новый автор";
+    ModelContainer model = new ModelContainer();
+}
+
+<br />
+
+<form method="post" action="~/AddNewObject/AddAuthor">
+
+    Фамилия:
+    <input type="text" name="Surname" />
+
+    <br />
+    <br />
+
+    Имя:
+    <input type="text" name="Name" />
+
+    <br />
+    <br />
+    
+    Отчество:
+    <input type="text" name="SecondName" />
+
+    <br />
+    <br />
+
+    Страна:
+    <select name="CountryId">
+        @{
+            foreach (Country country in model.CountrySet)
+            {
+                <option value="@country.Id">@{ Write(country.Name); }</option>
+            }
+        }
+    </select>
+
+    <br />
+    <br />
+
+    <input class="btn btn-default" type="submit" value="Добавить" />
+</form>
+
+<p><a href="~/AddNewObject/NewCountry" class="btn btn-primary btn-lg">Добавить страну&raquo;</a></p>

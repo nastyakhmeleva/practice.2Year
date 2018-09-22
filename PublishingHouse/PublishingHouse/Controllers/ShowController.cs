@@ -37,5 +37,15 @@ namespace PublishingHouse.Controllers
             ViewBag.Books = model.BooksSet.Where(x => x.Genre.Id == id).ToList();
             return View();
         }
+
+        public ActionResult Delete(int id)
+        {
+            ModelContainer model = new ModelContainer();
+
+            model.BooksSet.Remove(model.BooksSet.Find(id));
+            model.SaveChanges();
+            
+            return Redirect("~/Show/ShowBooks");
+        }
     }
 }

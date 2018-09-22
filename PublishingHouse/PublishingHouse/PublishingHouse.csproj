@@ -335,6 +335,10 @@
     <Content Include="Views\AddNewObject\AddBookExemplar.cshtml" />
     <Content Include="Views\Show\ShowAuthor.cshtml" />
     <Content Include="Views\Show\ShowGenre.cshtml" />
+    <Content Include="Views\AddNewObject\NewBook.cshtml" />
+    <Content Include="Views\AddNewObject\NewAuthor.cshtml" />
+    <Content Include="Views\AddNewObject\NewGenre.cshtml" />
+    <Content Include="Views\AddNewObject\NewCountry.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

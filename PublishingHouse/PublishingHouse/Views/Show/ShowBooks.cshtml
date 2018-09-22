@@ -15,6 +15,8 @@
         <th>
             Жанр
         </th>
+        <th>
+        </th>
     </tr>
     @{
         foreach (Books book in model.BooksSet)
@@ -30,14 +32,21 @@
                     <a href="~/Show/ShowAuthor/@book.Author.Id">
                         @{Write(book.Author.Surname + ' ' + book.Author.Name + ' ' + book.Author.SecondName);}
                     </a>
-</td>
+                </td>
 
                 <td>
                     <a href="~/Show/ShowGenre/@book.Genre.Id">
                         @{Write(book.Genre.Name);}
                     </a>
-</td>
+                </td>
+                <td>
+                    <a href="~/Show/Delete/@book.Id">
+                        Удалить
+                    </a>
+                </td>
             </tr>
-                        }
+        }
     }
 </table>
+
+<p><a href="~/AddNewObject/NewBook" class="btn btn-primary btn-lg">Добавить &raquo;</a></p>
