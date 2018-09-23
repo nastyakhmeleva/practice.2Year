@@ -113,16 +113,16 @@ namespace PublishingHouse.Controllers
 
             if (Year != "" && Number != "")
             {
-                BookExemplar book = new BookExemplar()
+                BookExemplar bookExemplar = new BookExemplar()
                 {
-                    Books = AddNewObjectController.book,
+                    Books = model.BooksSet.Find(book.Id),
                     Year = Int32.Parse(Year),
                     Number = Int32.Parse(Number),
                     Store = model.StoreSet.Find(StoreId),
                     Series = model.SeriesSet.Find(SerieId)
                 };
 
-                model.BookExemplarSet.Add(book);
+                model.BookExemplarSet.Add(bookExemplar);
                 model.SaveChanges();
 
                 return Redirect("~/Show/ShowBookExemplar/"+book.Id);
