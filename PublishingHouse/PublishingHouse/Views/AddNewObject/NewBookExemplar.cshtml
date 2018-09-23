@@ -1,10 +1,17 @@
-﻿
+﻿@using PublishingHouse.Controllers
+
 @{
     ViewBag.Title = "Добавить";
     ModelContainer model=new ModelContainer();
 }
 
-<form method="post" href="~/AddNewObject/">
+<form method="post" action="~/AddNewObject/AddBookExemplar">
+    
+    Год публикации:
+    <input type="text" name="Year" />
+
+    <br />
+    <br />
 
     Магазин:
     <select name="StoreId">
@@ -14,11 +21,19 @@
             foreach (Store store in model.StoreSet)
             {
                 <option value="@store.Id">@{ Write(store.Name+" - "+store.City.Name); }</option>
-                    }
+            }
         }
     </select>
+
     <br />
     <br />
+    
+    Кол-во:
+    <input type="text" name="Number" />
+
+    <br />
+    <br />
+
     Серия:
     <select name="SerieId">
 
@@ -27,7 +42,7 @@
             foreach (Series serie in model.SeriesSet)
             {
                 <option value="@serie.Id">@{ Write(serie.Name); }</option>
-                    }
+            }
         }
     </select>
     <br />
@@ -35,3 +50,7 @@
     
     <input class="btn btn-default" type="submit" value="Добавить" />
 </form>
+
+<p><a href="~/AddNewObject/NewStore" class="btn btn-primary btn-lg">Добавить магазин&raquo;</a></p>
+<p><a href="~/AddNewObject/NewSerie" class="btn btn-primary btn-lg">Добавить серию&raquo;</a></p>
+<p><a href="~/Show/ShowBookExemplar/@AddNewObjectController.book.Id" class="btn btn-primary btn-lg">Назад&raquo;</a></p>

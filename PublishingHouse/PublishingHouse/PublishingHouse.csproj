@@ -332,13 +332,16 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Show\ShowBooks.cshtml" />
     <Content Include="Views\Show\ShowBookExemplar.cshtml" />
-    <Content Include="Views\AddNewObject\AddBookExemplar.cshtml" />
+    <Content Include="Views\AddNewObject\NewBookExemplar.cshtml" />
     <Content Include="Views\Show\ShowAuthor.cshtml" />
     <Content Include="Views\Show\ShowGenre.cshtml" />
     <Content Include="Views\AddNewObject\NewBook.cshtml" />
     <Content Include="Views\AddNewObject\NewAuthor.cshtml" />
     <Content Include="Views\AddNewObject\NewGenre.cshtml" />
     <Content Include="Views\AddNewObject\NewCountry.cshtml" />
+    <Content Include="Views\AddNewObject\NewStore.cshtml" />
+    <Content Include="Views\AddNewObject\NewCity.cshtml" />
+    <Content Include="Views\AddNewObject\NewSerie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

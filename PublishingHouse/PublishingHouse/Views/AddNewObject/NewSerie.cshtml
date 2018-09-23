@@ -1,0 +1,27 @@
+﻿@using PublishingHouse.Controllers
+
+@{
+    ViewBag.Title = "Новая серия";
+}
+
+<form method="post" action="~/AddNewObject/AddSerie">
+
+    Название:
+    <input type="text" name="Name" />
+
+    <br />
+    <br />
+
+    Тип обложки:
+    <select name="Type">
+        <option value="Мягкая">Мягкая</option>
+        <option value="Твердая">Твердая</option>
+    </select>
+
+    <br />
+    <br />
+
+   <input class="btn btn-default" type="submit" value="Добавить" />
+</form>
+
+<p><a href="~/AddNewObject/NewBookExemplar/@AddNewObjectController.book.Id" class="btn btn-primary btn-lg">Назад&raquo;</a></p>

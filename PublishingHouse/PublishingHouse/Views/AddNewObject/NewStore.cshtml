@@ -1,0 +1,47 @@
+﻿@using PublishingHouse.Controllers
+
+@{
+    ViewBag.Title = "Новый магазин";
+    ModelContainer model=new ModelContainer();
+}
+
+<form method="post" action="~/AddNewObject/AddStore">
+    
+    Название:
+    <input type="text" name="Name" />
+
+    <br />
+    <br />
+
+    Город:
+    <select name="CityId">
+
+
+        @{
+            foreach (City city in model.CitySet)
+            {
+                <option value="@city.Id">@{ Write(city.Name); }</option>
+            }
+        }
+    </select>
+
+    <br />
+    <br />
+    
+    Улица:
+    <input type="text" name="Street" />
+
+    <br />
+    <br />
+
+    Дом:
+    <input type="text" name="House" />
+
+    <br />
+    <br />
+    
+    <input class="btn btn-default" type="submit" value="Добавить" />
+</form>
+
+<p><a href="~/AddNewObject/NewStore" class="btn btn-primary btn-lg">Добавить город&raquo;</a></p>
+<p><a href="~/AddNewObject/NewBookExemplar/@AddNewObjectController.book.Id" class="btn btn-primary btn-lg">Назад&raquo;</a></p>
