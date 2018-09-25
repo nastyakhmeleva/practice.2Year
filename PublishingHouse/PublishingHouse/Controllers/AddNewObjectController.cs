@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.WebPages;
 
 namespace PublishingHouse.Controllers
 {
@@ -111,7 +112,7 @@ namespace PublishingHouse.Controllers
         {
             ModelContainer model = new ModelContainer();
 
-            if (Year != "" && Number != "")
+            if (Year != "" && Number != "" && Number.IsInt())
             {
                 BookExemplar bookExemplar = new BookExemplar()
                 {

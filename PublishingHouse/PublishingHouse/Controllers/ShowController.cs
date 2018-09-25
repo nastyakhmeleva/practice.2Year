@@ -42,6 +42,13 @@ namespace PublishingHouse.Controllers
         {
             ModelContainer model = new ModelContainer();
 
+            var books = model.BookExemplarSet.Where(x => x.Books.Id == id).ToList();
+
+            foreach (BookExemplar book in books)
+            {
+                model.BookExemplarSet.Remove(book);
+            }
+
             model.BooksSet.Remove(model.BooksSet.Find(id));
             model.SaveChanges();
             
